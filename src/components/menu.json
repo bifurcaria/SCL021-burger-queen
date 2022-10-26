@@ -1,14 +1,20 @@
 {
     "items": [
         {
-            "name": "pan",
+            "id": 0,
+            "name": "pan con queso",
             "category": "comida",
-            "price": 1000
+            "price": 1000,
+            "desc": "aaa",
+            "img": "#"
         },
         {
+            "id": 1,
             "name": "agua",
             "category": "bebida",
-            "price": 1000
+            "price": 1000,
+            "desc": "aaa",
+            "img": "#"
         }
     ]
 }

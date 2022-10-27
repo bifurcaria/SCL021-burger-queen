@@ -1,20 +1,26 @@
-{
-    "items": [
-        {
-            "id": 0,
-            "name": "pan con queso",
-            "category": "comida",
-            "price": 1000,
-            "desc": "aaa",
-            "img": "#"
-        },
-        {
-            "id": 1,
-            "name": "agua",
-            "category": "bebida",
-            "price": 1000,
-            "desc": "aaa",
-            "img": "#"
-        }
-    ]
-}
+[
+    {
+        "name": "drinks",
+        "items": [
+            {
+                "id": 0,
+                "name": "agua",
+                "price": 1000,
+                "desc": "aaa",
+                "img": "#"
+            }
+        ]
+    },
+    {
+        "name": "food",
+        "items": [
+            {
+                "id": 1,
+                "name": "pan con queso",
+                "price": 1000,
+                "desc": "aaa",
+                "img": "#"
+            }
+        ]
+    }
+]

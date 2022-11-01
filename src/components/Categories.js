@@ -1,21 +1,19 @@
-import React, {useState} from "react";
+import React from "react";
 //useeffect o algo q me permita devolver el valor al menos hacia app, para que sepa cuales mostrar con display
-const Categories = ({menu}) => {  
-
-    const [activeCategory, setActiveCategory] = useState("");
+const Categories = ({menu, filterMenu}) => {  
 
     return (
           <div className="App">
             {menu.map((element) => {
-            const { name } = element
               return (
                 <button
               type="button"
-              className={`${
+              /* className={`${
                 activeCategory === {name} ? "btn active" : "btn"
               }`}
-              key = {name}
-              onClick={() => funcionquefiltre({name})}
+              */
+              key = {element}
+              onClick={() => filterMenu(element)}
             >
               {element}
             </button>

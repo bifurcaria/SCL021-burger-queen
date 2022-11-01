@@ -3,6 +3,7 @@ import React from "react";
 //por esto puedo usar adentro como variable
 //props puede ser datos y tb funcion ojo
 const Display = ({menu, category}) => {
+  
   const {items} = menu.find(element => element.name === category)
     return(
         <div>

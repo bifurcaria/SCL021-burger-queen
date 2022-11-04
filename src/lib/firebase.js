@@ -1,5 +1,5 @@
 import app from "./firebaseconfig";
-import {getDatabase, ref, runTransaction } from 'firebase/database'
+//import {getDatabase, ref, runTransaction } from 'firebase/database'
 import { getFirestore, collection, getDocs, addDoc, Timestamp } from 'firebase/firestore/lite'
 import { getAuth,  GoogleAuthProvider, signInWithPopup} from 'firebase/auth'
 

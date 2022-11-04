@@ -1,4 +1,6 @@
 import React from "react";
+import 'semantic-ui-css/semantic.min.css';
+import { Button, Card, Image } from 'semantic-ui-react';
 // desestructuracion, en vez de parentesis iba props, pero se puede desestructurar y sacar solo list
 //por esto puedo usar adentro como variable
 //props puede ser datos y tb funcion ojo
@@ -6,29 +8,33 @@ const Display = ({ menu, category, add }) => {
 
   const { items } = menu.find(element => element.name === category)
   return (
-    <div>
+    <div style={{textAlign: '-webkit-center', display:'flex'}}>
       {items.length > 0 && items.map(element => {
         const { id, name, img, desc, price } = element;
         return (
-          <article key={id} className="App">
-            <img src={img} alt={name} className="App" />
-            <div className="App">
-              <header>
-                <h4>{name}</h4>
-                <h4 className="App">${price}</h4>
-              </header>
-              <p className="App">{desc}</p>
-
-              <button
-                type="button"
-                key="id"
+          <Card key={id}>
+          <Image src={img} alt={name} wrapped ui={false} />
+          <Card.Content>
+            <Card.Header>{name}</Card.Header>
+            <Card.Meta>
+              <span className='date'>${price}</span>
+            </Card.Meta>
+            <Card.Description>
+              {desc}
+            </Card.Description>
+            <Button
+                type='button'
+                key='id'
                 onClick={() => add(name)}
               >
-                agregar
-              </button>
-            </div>
-          </article>
-        );
+                Agregar
+              </Button>
+              </Card.Content>
+        </Card>
+)
+              
+           
+
       }
       )}
     </div>

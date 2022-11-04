@@ -5,6 +5,9 @@ import Display from './components/Display';
 import Login from './components/Login';
 import Order from './components/Order';
 import data from './components/menu.json';
+import 'semantic-ui-css/semantic.min.css';
+import { Grid, Segment } from 'semantic-ui-react';
+
 
 //aquí llamo a todos los componentes
 function App() {
@@ -12,13 +15,12 @@ function App() {
   //crear funcion que le paso a categories onclick pero ponerla acá?
   const names = data.map((element) => { return element.name })
 
-  const [menuItems, setMenuItems] = useState(data);
+  //dejar items del menu como estado, puede servir
+  //const [menuItems, setMenuItems] = useState(data);
   //aqui necesito crear uno que diga "todos" en vez de "drinks"
-  const [activeCategory, setActiveCategory] = useState("drinks");
+  const [activeCategory, setActiveCategory] = useState("Café");
   // const [categories, setCategories] = useState(allCategories);
   const [currentOrder, setCurrentOrder] = useState([])
-  //test
-  const emptyOrder=[]
 
   const filterMenu = (category) => {
     setActiveCategory(category);
@@ -42,14 +44,20 @@ function App() {
         menu={names}
         filterMenu={filterMenu}
       />
-      <Display
+       <Grid columns={2} stackable>
+      <Grid.Column>
+        <Segment> <Display
         menu={data}
         category={activeCategory}
         add={takeOrder}
-      />
-      <Order
+      /></Segment>
+      </Grid.Column>
+      <Grid.Column>
+        <Segment> <Order
       command={currentOrder}
-      />
+      /></Segment>
+      </Grid.Column>
+      </Grid>
     </div>
   );
 }

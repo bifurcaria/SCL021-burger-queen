@@ -1,12 +1,14 @@
 import React from "react";
+import 'semantic-ui-css/semantic.min.css';
+import { Button } from 'semantic-ui-react';
 //useeffect o algo q me permita devolver el valor al menos hacia app, para que sepa cuales mostrar con display
 const Categories = ({ menu, filterMenu }) => {
 
   return (
-    <div className="App">
+    <div className="Categories">
       {menu.map((element) => {
         return (
-          <button
+          <Button
             type="button"
             /* className={`${
               activeCategory === {name} ? "btn active" : "btn"
@@ -16,7 +18,7 @@ const Categories = ({ menu, filterMenu }) => {
             onClick={() => filterMenu(element)}
           >
             {element}
-          </button>
+          </Button>
         );
       })}
     </div>

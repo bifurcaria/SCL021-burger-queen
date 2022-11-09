@@ -37,14 +37,16 @@ const signGoogle = () => {
   };
 
 
-const placeOrder = async (newOrder) => {
+const placeOrder = async (newOrder, customer) => {
     const user = auth.currentUser;
     if (user !== null) {
-        const docRef = await addDoc(collection(db, 'activeOrders'), {
-            name: user.displayName,
+        const docRef = await addDoc(collection(db, 'orders'), {
+            waiterName: user.displayName,
+            customerName: customer,
             uid: user.uid,
-            description: [newOrder],
+            order: newOrder,
             date: Timestamp.fromDate(new Date()),
+            state: "active"
         }
         );
         console.log('Document written with ID: ', docRef.id)

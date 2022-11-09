@@ -1,5 +1,5 @@
 import './App.css';
-import React, { useState } from 'react';
+import React, { useState, useEffect} from 'react';
 import Categories from './components/Categories';
 import Display from './components/Display';
 import Login from './components/Login';
@@ -21,12 +21,14 @@ function App() {
   const [activeCategory, setActiveCategory] = useState("Café");
   // const [categories, setCategories] = useState(allCategories);
   const [currentOrder, setCurrentOrder] = useState([])
+  const [customerName, setCustomerName] = useState("")
 
   const filterMenu = (category) => {
     setActiveCategory(category);
     return;
   }
-
+  
+  //trabajar aqui para poner precios
   const takeOrder = (item) => {
     setCurrentOrder([
       item,
@@ -35,15 +37,34 @@ function App() {
     return
   }
   
+  const deleteFromOrder = (item) => {
+    setCurrentOrder(
+      currentOrder.filter((thisItem) => (thisItem) !== item)
+    );
+    return
+  }
+
+  function totalSum() {
+    const [count, setCount] = useState(0);
+    useEffect(() => {
+      let prices = (currentOrder.map((item)=>(Number(item.price))))
+      setCount(prices.reduce((a,b) => a + b, 0))
+    }, [currentOrder]); 
+  
+    return count;
+  }
+
 
   return (
     <div className="App">
       {/* cuidaito,  llaves son para usar codigo cuando quiera agregar un componente tengo q ponerlo como tag jsx y para pasarle informacion debe ser a traves de props */}
       <Login />
+
       <Categories
         menu={names}
         filterMenu={filterMenu}
       />
+
        <Grid columns={2} stackable>
       <Grid.Column>
         <Segment> <Display
@@ -53,8 +74,13 @@ function App() {
       /></Segment>
       </Grid.Column>
       <Grid.Column>
+
         <Segment> <Order
       command={currentOrder}
+      erase={deleteFromOrder}
+      price={totalSum()}
+      nameCallback={setCustomerName}
+      nameState = {customerName}
       /></Segment>
       </Grid.Column>
       </Grid>

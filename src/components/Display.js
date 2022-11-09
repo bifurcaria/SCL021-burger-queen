@@ -25,7 +25,7 @@ const Display = ({ menu, category, add }) => {
             <Button
                 type='button'
                 key='id'
-                onClick={() => add(name)}
+                onClick={() => add(element)}
               >
                 Agregar
               </Button>

@@ -1,5 +1,5 @@
 # Burger Queen
-hola
+WIP (el readme de abajo es de Laboratoria jeje)
 
 ## Índice
 

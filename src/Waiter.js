@@ -2,15 +2,13 @@ import './App.css';
 import React, { useState, useEffect} from 'react';
 import Categories from './components/Categories';
 import Display from './components/Display';
-import Login from './components/Login';
 import Order from './components/Order';
 import data from './components/menu.json';
 import 'semantic-ui-css/semantic.min.css';
 import { Grid, Segment } from 'semantic-ui-react';
 
-
 //aquí llamo a todos los componentes
-function App() {
+function Waiter() {
   //state que sea la categoria activa
   //crear funcion que le paso a categories onclick pero ponerla acá?
   const names = data.map((element) => { return element.name })
@@ -58,8 +56,7 @@ function App() {
   return (
     <div className="App">
       {/* cuidaito,  llaves son para usar codigo cuando quiera agregar un componente tengo q ponerlo como tag jsx y para pasarle informacion debe ser a traves de props */}
-      <Login />
-
+      
       <Categories
         menu={names}
         filterMenu={filterMenu}
@@ -88,4 +85,4 @@ function App() {
   );
 }
 
-export default App;
+export default Waiter;

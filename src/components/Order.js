@@ -4,11 +4,6 @@ import { Button, Item, Input } from 'semantic-ui-react';
 import { placeOrder } from "../lib/firebase";
 
 const Order = ({ command, erase, price, nameCallback, nameState }) => {
-    if (command.length === 0) {
-        console.log("empty")
-        return (<h4>todavía no has agregado nada</h4>)
-    }
-    console.log("notempty");
     return (
         <div className="App">
             <Input 

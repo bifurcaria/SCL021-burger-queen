@@ -1,11 +1,11 @@
 import app from "./firebaseconfig";
 //import {getDatabase, ref, runTransaction } from 'firebase/database'
-import { getFirestore, collection, getDocs, addDoc, Timestamp } from 'firebase/firestore/lite'
-import { getAuth,  GoogleAuthProvider, signInWithPopup} from 'firebase/auth'
+import { getFirestore, collection, getDocs, addDoc, Timestamp, query, querySnapShot, doc, updateDoc, serverTimestamp} from 'firebase/firestore'
+import { getAuth,  GoogleAuthProvider, signInWithPopup, onAuthStateChanged} from 'firebase/auth'
 
 const db = getFirestore(app);
 // -----------Firebase Login
-const auth = getAuth();
+
 const provider = new GoogleAuthProvider();
 //const getUserData = () => auth.currentUser;
 
@@ -55,16 +55,57 @@ const placeOrder = async (newOrder, customer) => {
     }
 }
 
-const getActiveOrders = async (db) => {
-    const activeOrdersCol = collection(db, 'activeOrders');
-    const orderSnapshot = await getDocs(activeOrdersCol);
-    const orderList = orderSnapshot.docs.map(doc => doc.data());
-    console.log(orderList)
-    return orderList;
+
+
+const getOrders = async (state) => {
+
+  const orders = query(collection(db, 'orders'));
+  const querySnapShot = await getDocs(orders);
+  const allOrders = [];
+  querySnapShot.forEach((doc) => {
+    if (doc.data().state === state) {
+      allOrders.push({ ...doc.data(), id: doc.id });
+    }
+  });
+  return allOrders;
+ /* onSnapshot(doc(db, '/orders/CK5xivFv1tegRH52U1GB'), (doc) => {
+    console.log(doc.data())
+  }) */
+
+  
 }
 
+
+const auth = getAuth();
+onAuthStateChanged(auth, (user) => {
+  if (user) {
+    // User is signed in, see docs for a list of available properties
+    // https://firebase.google.com/docs/reference/js/firebase.User
+    const uid = user.uid;
+    return uid
+  } else {
+    return false
+  }
+});
+
+const updateOrder = async (id, state) => {
+   
+    const ref = doc(db, 'orders', id);
+
+        await updateDoc(ref, {
+            state: state,
+            [state] : serverTimestamp()
+        });
+        console.log('Document re-written')
+    
+}
+
+
 export {
+    db,
     signGoogle,
     placeOrder,
-    getActiveOrders,
+    getOrders,
+    updateOrder,
+    auth
 }

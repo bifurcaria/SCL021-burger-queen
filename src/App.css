@@ -1,5 +1,12 @@
+
 div#root {
   text-align: -webkit-center
+}
+
+.pushable>.pusher {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .App {
@@ -15,6 +22,10 @@ div#root {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
+}
+
+.ui.visible[class*="very wide"].left.sidebar~.pusher {
+  transform: translate3d(300px,0,0) !important;
 }
 
 .App-header {

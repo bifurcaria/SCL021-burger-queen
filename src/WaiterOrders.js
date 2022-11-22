@@ -3,17 +3,13 @@ import Navbar from './components/Navbar'
 import { Container, List, Card, Button, Image, Tab } from 'semantic-ui-react'
 import { getOrders, updateOrder } from './lib/firebase'
 import OrderList from './components/OrderList'
-import { db } from './lib/firebase'
-import { validateCallback } from '@firebase/util'
 import timeFormat from './components/timeFormat'
 import { Timestamp } from 'firebase/firestore'
 
-function Cook() {
+function WaiterOrders () {
 
     const [orders, setOrders] = useState([])
     const [filter, setFilter] = useState('active')
-
-
 
     useEffect(() => {
         const setAllOrders = () => {
@@ -33,7 +29,8 @@ function Cook() {
 
 
     return (
-        <Container>
+        <Container style={{marginTop: '50px', width: '-webkit-fill-available'}}>
+            <Navbar/>
             <Button.Group>
                 <Button onClick={() => setFilter('active')}>Pedidos activos</Button>
                 <Button onClick={() => setFilter('completed')}>Listos para servir</Button>
@@ -48,13 +45,13 @@ function Cook() {
                         id={id}
                         customerName={customerName}
                         state={state}
-                        plates={order.map}
-                        setAs='completed'
+                        plates={order}
+                        setAs='delivered'
                         date={date.seconds}
                         delivered={delivered.seconds}
                         completed={completed.seconds}
                         filter={filter}
-                        condition={filter === 'active'}
+                        condition={filter === 'completed'}
                     />
                 })}
             </List>
@@ -63,4 +60,4 @@ function Cook() {
 
 }
 
-export default Cook
+export default WaiterOrders

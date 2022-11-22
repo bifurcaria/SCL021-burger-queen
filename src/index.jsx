@@ -8,6 +8,7 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import WaiterOrders from './WaiterOrders';
 
 const router = createBrowserRouter([
   {
@@ -17,6 +18,10 @@ const router = createBrowserRouter([
   {
     path: "waiter",
     element: <Waiter />,
+  },
+  {
+    path: "orders",
+    element: <WaiterOrders />,
   },
   {
     path: "cook",

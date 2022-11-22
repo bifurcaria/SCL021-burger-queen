@@ -46,6 +46,8 @@ const placeOrder = async (newOrder, customer) => {
             uid: user.uid,
             order: newOrder,
             date: Timestamp.fromDate(new Date()),
+            completed: Timestamp.fromDate(new Date()),
+            delivered: Timestamp.fromDate(new Date()),
             state: "active"
         }
         );

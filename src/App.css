@@ -2,11 +2,32 @@ div#root {
   text-align: -webkit-center
 }
 
+.button{
+  background-color: #df5340 !important;
+  color:antiquewhite !important;
+}
+
+body{
+  background: #fcf8f4 !important;
+  color:#3a2e39 !important;
+}
+
+a{
+  color:#3a2e39 !important;
+}
+
+header{
+  color:#3a2e39 !important;
+}
+
+
 .ui.menu{
-  background: #61dafb !important;
+  background: transparent !important;
+  box-shadow: none !important;
 }
 
 .pushable>.pusher {
+  background:transparent !important;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -73,4 +94,18 @@ div#root {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+}
+
+.ui.segment{
+  background:transparent !important;
+}
+
+.ui.basic.segment{
+  background: #f1c2ab !important;
+  border-radius:7px !important;
+  width:75%;
+}
+
+.ui.segment.pushable{
+  border: none !important
 }

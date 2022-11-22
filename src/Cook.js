@@ -48,7 +48,7 @@ function Cook() {
                         id={id}
                         customerName={customerName}
                         state={state}
-                        plates={order.map}
+                        plates={order}
                         setAs='completed'
                         date={date.seconds}
                         delivered={delivered.seconds}

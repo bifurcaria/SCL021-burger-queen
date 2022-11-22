@@ -8,7 +8,7 @@ const Display = ({ menu, category, add }) => {
 
   const { items } = menu.find(element => element.name === category)
   return (
-    <div style={{textAlign: '-webkit-center',padding: '25px', display:'flex', justifyContent: 'center', alignItems: 'center'}}>
+    <div style={{textAlign: '-webkit-center',padding: '25px', width:'80%', display:'flex', flexWrap:'wrap', justifyContent: 'center', alignItems: 'center'}}>
       {items.length > 0 && items.map(element => {
         const { id, name, img, desc, price } = element;
         return (

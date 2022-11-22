@@ -1,3 +1,4 @@
+
 import { signGoogle } from '../lib/firebase.js';
 import 'semantic-ui-css/semantic.min.css';
 import { Button } from 'semantic-ui-react';

@@ -14,7 +14,7 @@ function Waiter() {
 
   const names = data.map((element) => { return element.name })
 
-  const [activeCategory, setActiveCategory] = useState("Café");
+  const [activeCategory, setActiveCategory] = useState("Para beber");
   const [currentOrder, setCurrentOrder] = useState([])
   const [customerName, setCustomerName] = useState("")
   const [visible, setVisible] = useState(false);

@@ -5,42 +5,245 @@
             {
                 "id": 10,
                 "name": "Bebida de uva",
-                "price": 1000,
+                "price": 1500,
                 "desc": "Bebida con gas sabor uva",
-                "img": "icons/beverages/grapesoda.png"
+                "img": "https://raw.githubusercontent.com/bifurcaria/SCL021-burger-queen/dev/src/components/icons/beverages/grapesoda.png"
             },
             {
                 "id": 11,
-                "name": "Americano",
-                "price": 2000,
-                "desc": "Shot de espresso + agua",
-                "img": "https://images.unsplash.com/photo-1521302080334-4bebac2763a6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80"
+                "name": "Leche",
+                "price": 1000,
+                "desc": "Cajita de leche",
+                "img": "https://raw.githubusercontent.com/bifurcaria/SCL021-burger-queen/dev/src/components/icons/beverages/milk.png"
             },
             {
                 "id": 12,
-                "name": "Latte",
-                "price": 2000,
-                "desc": "Shot de espresso + leche",
-                "img": "https://images.unsplash.com/photo-1561296215-e4fad203bd4c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80"
+                "name": "Jugo de naranja",
+                "price": 2500,
+                "desc": "Jugo de naranja en botella",
+                "img": "https://raw.githubusercontent.com/bifurcaria/SCL021-burger-queen/dev/src/components/icons/beverages/orangejuice.png"
+            },
+            {
+                "id": 13,
+                "name": "Vino tinto",
+                "price": 3000,
+                "desc": "Copa de vino tinto",
+                "img": "https://raw.githubusercontent.com/bifurcaria/SCL021-burger-queen/dev/src/components/icons/beverages/winered.png"
+            },
+            {
+                "id": 14,
+                "name": "Vino blanco",
+                "price": 3000,
+                "desc": "Copa de vino blanco",
+                "img": "https://raw.githubusercontent.com/bifurcaria/SCL021-burger-queen/dev/src/components/icons/beverages/winewhite.png"
             }
         ]
     },
     {
-        "name": "Tostadas",
+        "name": "Desayuno",
         "items": [
             {
                 "id": 20,
-                "name": "Tostadas palta",
+                "name": "Omelet",
                 "price": 2500,
-                "desc": "Tostadas, palta y huevo",
-                "img": "https://images.unsplash.com/photo-1525351484163-7529414344d8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80"
+                "desc": "Tortilla de huevo con verduritas",
+                "img": "https://raw.githubusercontent.com/bifurcaria/SCL021-burger-queen/dev/src/components/icons/breakfast/omelet.png"
             },
             {
                 "id": 21,
-                "name": "Tostadas hummus",
+                "name": "Waffle",
                 "price": 2500,
-                "desc": "Tostadas, hummus de betarraga y semillas",
-                "img": "https://images.unsplash.com/photo-1601053856244-b0790f493169?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=580&q=80"
+                "desc": "Waffles con fruta y crema",
+                "img": "https://raw.githubusercontent.com/bifurcaria/SCL021-burger-queen/dev/src/components/icons/breakfast/waffle.png"
+            }
+        ]
+    },
+    {
+        "name": "Platos",
+        "items": [
+            {
+                "id": 30,
+                "name": "Hamburguesa",
+                "price": 4500,
+                "desc": "Hamburguesa de legumbres con queso y cebolla",
+                "img": "https://raw.githubusercontent.com/bifurcaria/SCL021-burger-queen/dev/src/components/icons/plates/burger.png"
+            },
+            {
+                "id": 31,
+                "name": "Papitas",
+                "price": 4000,
+                "desc": "Papas fritas + porción de salsa",
+                "img": "https://raw.githubusercontent.com/bifurcaria/SCL021-burger-queen/dev/src/components/icons/plates/fries.png"
+            },
+            {
+                "id": 32,
+                "name": "Completo",
+                "price": 3000,
+                "desc": "Con tomate, chucrut + mayo y salchicha vegetal",
+                "img": "https://raw.githubusercontent.com/bifurcaria/SCL021-burger-queen/dev/src/components/icons/plates/hotdog.png"
+            },
+            {
+                "id": 33,
+                "name": "Macarrones con queso",
+                "price": 5000,
+                "desc": "Fideos con salsa de queso cheddar",
+                "img": "https://raw.githubusercontent.com/bifurcaria/SCL021-burger-queen/dev/src/components/icons/plates/macncheese.png"
+            },
+            {
+                "id": 34,
+                "name": "Pizza",
+                "price": 4000,
+                "desc": "Trozo de pizza con tomate y orégano",
+                "img": "https://raw.githubusercontent.com/bifurcaria/SCL021-burger-queen/dev/src/components/icons/plates/pizza.png"
+            },
+            {
+                "id": 35,
+                "name": "Sandwich",
+                "price": 4000,
+                "desc": "Sandwich de lechuga, tomate y tofu",
+                "img": "https://raw.githubusercontent.com/bifurcaria/SCL021-burger-queen/dev/src/components/icons/plates/sandwich.png"
+            },
+            {
+                "id": 36,
+                "name": "Spaghetti + marinara",
+                "price": 5000,
+                "desc": "Fideos con salsa de tomates frescos, verduras y queso rallado",
+                "img": "https://raw.githubusercontent.com/bifurcaria/SCL021-burger-queen/dev/src/components/icons/plates/spaghetti.png"
+            },
+            {
+                "id": 37,
+                "name": "Taco",
+                "price": 4500,
+                "desc": "Tortilla de maíz con chili y queso rallado",
+                "img": "https://raw.githubusercontent.com/bifurcaria/SCL021-burger-queen/dev/src/components/icons/plates/taco.png"
+            }
+            
+        ]
+    },
+    {
+        "name": "Para compartir",
+        "items": [
+            {
+                "id": 40,
+                "name": "Baguette",
+                "price": 4000,
+                "desc": "Panera con baguette y salsas",
+                "img": "https://raw.githubusercontent.com/bifurcaria/SCL021-burger-queen/dev/src/components/icons/snacks/baguette.png"
+            },
+            {
+                "id": 41,
+                "name": "Pan de ajo",
+                "price": 5000,
+                "desc": "Pan de pizza aderezado con mantequilla, ajo y parmesano",
+                "img": "https://raw.githubusercontent.com/bifurcaria/SCL021-burger-queen/dev/src/components/icons/snacks/garlicbread.png"
+            },
+            {
+                "id": 42,
+                "name": "Nachos",
+                "price": 5000,
+                "desc": "Tortillas de maíz con salsa de queso, crema ácida y cebollín",
+                "img": "https://raw.githubusercontent.com/bifurcaria/SCL021-burger-queen/dev/src/components/icons/snacks/nacho.png"
+            },
+            {
+                "id": 43,
+                "name": "Papitas chips",
+                "price": 4000,
+                "desc": "Chips de papas con sal y pimienta",
+                "img": "https://raw.githubusercontent.com/bifurcaria/SCL021-burger-queen/dev/src/components/icons/snacks/potatochips.png"
+            }
+        ]
+    },
+    {
+        "name": "Postres y dulces",
+        "items":[
+            {
+                "id": 50,
+                "name": "Cheesecake",
+                "price": 4500,
+                "desc": "Cheesecake con salsa de frutos rojos",
+                "img": "https://raw.githubusercontent.com/bifurcaria/SCL021-burger-queen/dev/src/components/icons/desserts/cheesecake.png"
+            },
+            {
+                "id": 51,
+                "name": "Galletitas",
+                "price": 3000,
+                "desc": "Porción de galletitas con chips de chocolate",
+                "img": "https://raw.githubusercontent.com/bifurcaria/SCL021-burger-queen/dev/src/components/icons/desserts/cookies.png"
+            },
+            {
+                "id": 52,
+                "name": "Galletas de jengibre",
+                "price": 4000,
+                "desc": "Galletitas de jengibre y miel",
+                "img": "https://raw.githubusercontent.com/bifurcaria/SCL021-burger-queen/dev/src/components/icons/desserts/gingerbreadman.png"
+            },
+            {
+                "id": 53,
+                "name": "Uvas",
+                "price": 3000,
+                "desc": "Porción de uvas verdes",
+                "img": "https://raw.githubusercontent.com/bifurcaria/SCL021-burger-queen/dev/src/components/icons/desserts/grape.png"
+            },
+            {
+                "id": 54,
+                "name": "Helado",
+                "price": 3500,
+                "desc": "Copa de helado, tres sabores a elección",
+                "img": "https://raw.githubusercontent.com/bifurcaria/SCL021-burger-queen/dev/src/components/icons/desserts/icecream.png"
+            },
+            {
+                "id": 55,
+                "name": "Pie de limón",
+                "price": 3000,
+                "desc": "Trozo de pie de limón",
+                "img": "https://raw.githubusercontent.com/bifurcaria/SCL021-burger-queen/dev/src/components/icons/desserts/lemonpie.png"
+            },
+            {
+                "id": 56,
+                "name": "Panqueques",
+                "price": 4000,
+                "desc": "Panqueques con syrup",
+                "img": "https://raw.githubusercontent.com/bifurcaria/SCL021-burger-queen/dev/src/components/icons/desserts/cheesecake.png"
+            },
+            {
+                "id": 57,
+                "name": "Sandía",
+                "price": 4500,
+                "desc": "Porción de sandía heladita en trozos",
+                "img": "https://raw.githubusercontent.com/bifurcaria/SCL021-burger-queen/dev/src/components/icons/desserts/cheesecake.png"
+            }
+        ]
+    },
+    {
+        "name": "Extras",
+        "items": [
+            {
+                "id": 60,
+                "name": "Salsa barbecue",
+                "price": 500,
+                "desc": "Porción de salsa barbecue",
+                "img": "https://raw.githubusercontent.com/bifurcaria/SCL021-burger-queen/dev/src/components/icons/extras/barbeque.png"
+            },
+            {
+                "id": 61,
+                "name": "Ketchup",
+                "price": 500,
+                "desc": "Porción de ketchup",
+                "img": "https://raw.githubusercontent.com/bifurcaria/SCL021-burger-queen/dev/src/components/icons/extras/ketchup.png"
+            },
+            {
+                "id": 62,
+                "name": "Mostaza",
+                "price": 500,
+                "desc": "Porción de mostaza",
+                "img": "https://raw.githubusercontent.com/bifurcaria/SCL021-burger-queen/dev/src/components/icons/extras/mustard.png"
+            },
+            {
+                "id": 63,
+                "name": "Pancito",
+                "price": 1000,
+                "desc": "Pan calentito",
+                "img": "https://raw.githubusercontent.com/bifurcaria/SCL021-burger-queen/dev/src/components/icons/extras/bread.png"
             }
         ]
     }

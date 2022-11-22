@@ -1,6 +1,9 @@
-
 div#root {
   text-align: -webkit-center
+}
+
+.ui.menu{
+  background: #61dafb !important;
 }
 
 .pushable>.pusher {
@@ -50,4 +53,24 @@ div#root {
   to {
     transform: rotate(360deg);
   }
+}
+
+.ui.card>.image>img, .ui.cards>.card>.image>img {
+  width: auto !important;
+}
+
+.ui.card, .ui.cards>.card {
+  width: 150px !important;
+  height: max-content;
+}
+
+.ui.card {
+  margin: 0 0 0 0 !important;
+}
+
+.ui.card>.content{
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }

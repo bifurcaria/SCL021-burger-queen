@@ -5,7 +5,7 @@ import { Button } from 'semantic-ui-react';
 const Categories = ({ menu, filterMenu }) => {
 
   return (
-    <div className="Categories">
+    <div className="Categories" style={{padding: '25px'}}>
       {menu.map((element) => {
         return (
           <Button

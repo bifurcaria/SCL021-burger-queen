@@ -2,7 +2,6 @@ import Login from './components/Login';
 import React from 'react'
 import { auth } from './lib/firebase'
 import Navbar from './components/Navbar'
-import { FirebaseError } from 'firebase/app';
 import {Button,Container} from 'semantic-ui-react'
 function Hello() {
     if (auth === false) {

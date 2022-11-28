@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import Navbar from './components/Navbar'
-import { Container, List, Card, Button, Image, Tab } from 'semantic-ui-react'
-import { getOrders, updateOrder } from './lib/firebase'
+import { Container, List, Button} from 'semantic-ui-react'
+import { getOrders } from './lib/firebase'
 import OrderList from './components/OrderList'
-import timeFormat from './components/timeFormat'
-import { Timestamp } from 'firebase/firestore'
 
 function WaiterOrders () {
 
@@ -39,7 +37,7 @@ function WaiterOrders () {
 
             <List>
                 {orders.length > 0 && orders.map(element => {
-                    const { waiterName, customerName, id, uid, date, order, state, delivered, completed } = element;
+                    const { waiterName, customerName, id, date, order, state, delivered, completed } = element;
                     return <OrderList
                         waiterName={waiterName}
                         id={id}

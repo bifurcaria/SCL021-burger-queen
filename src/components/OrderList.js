@@ -1,14 +1,13 @@
-import { orderBy } from "firebase/firestore";
-import React, {useState, useEffect} from "react";
-import { List, Button, Image, ListContent } from "semantic-ui-react";
+import React from "react";
+import { List, Button, Image } from "semantic-ui-react";
 import { updateOrder } from "../lib/firebase"
 import timeFormat from "./timeFormat";
 
-function OrderList({ waiterName, id, customerName, state, plates, setAs, date, filter, delivered, completed, condition }) {
+function OrderList({ waiterName, id, customerName, plates, setAs, date, filter, delivered, completed, condition }) {
 
 let now = new Date()
 now = now.getTime()/1000
-const [currentDate, setCurrentDate] = useState(now)
+//const [currentDate, setCurrentDate] = useState(now)
 
 //volver a ver esto más rato y usar state en vez de filter para evitar renderear mal botones o fechas
     const buttons = () => {

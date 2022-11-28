@@ -1,6 +1,6 @@
 import app from "./firebaseconfig";
 //import {getDatabase, ref, runTransaction } from 'firebase/database'
-import { getFirestore, collection, getDocs, addDoc, Timestamp, query, querySnapShot, doc, updateDoc, serverTimestamp} from 'firebase/firestore'
+import { getFirestore, collection, getDocs, addDoc, Timestamp, query, doc, updateDoc, serverTimestamp} from 'firebase/firestore'
 import { getAuth,  GoogleAuthProvider, signInWithPopup, onAuthStateChanged} from 'firebase/auth'
 
 const db = getFirestore(app);

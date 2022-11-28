@@ -5,7 +5,7 @@ function OrderList(orders) {
     console.log(orders)
     return (<List divided verticalAlign='middle'>
         {orders.map((element) => {
-            const { customerName, date, order, state, uid, waiterName } = element
+            const { customerName } = element
             return (
                 <List.Item>
                     <List.Content floated='right'>

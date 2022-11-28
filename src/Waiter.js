@@ -72,10 +72,8 @@ function Waiter() {
                   <Sidebar
                       
                       icon='labeled'
-                      inverted
-                      vertical
                       visible={visible}
-                      width='very wide'
+                      width='wide'
                   >
                       <Order
                           command={currentOrder}

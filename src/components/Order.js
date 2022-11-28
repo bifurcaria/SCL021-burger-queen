@@ -11,7 +11,7 @@ const Order = ({ command, erase, price, nameCallback, nameState }) => {
             onChange={e => nameCallback(e.target.value)} />
             <Item.Group relaxed>
                 {command.map((element) => {
-                    const { id, name, img, desc, price } = element
+                    const { id, name, price } = element
                     return (
                         <Item key={id}>
                             <Item.Content verticalAlign='middle'>

@@ -15,7 +15,7 @@ function WaiterOrders () {
                 .then((value) => {
                     value.sort((a, b) => {
                         // para ordenar valores numericos (criteria corresponde al parametro que se va a filtrar)
-                        return new Number(a.date.seconds) - new Number(b.date.seconds);
+                        return Number(a.date.seconds) - Number(b.date.seconds);
                     }
                     );
                     setOrders(value)

@@ -17,15 +17,15 @@ const router = createBrowserRouter([
     errorElement: <Hello />
   },
   {
-    path: "waiter",
+    path: "/SCL021-burger-queen/waiter",
     element: <Waiter />,
   },
   {
-    path: "orders",
+    path: "/SCL021-burger-queen/orders",
     element: <WaiterOrders />,
   },
   {
-    path: "cook",
+    path: "/SCL021-burger-queen/cook",
     element: <Cook />,
   },
 ]);

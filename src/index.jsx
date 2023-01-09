@@ -14,6 +14,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Hello />,
+    errorElement: <Hello />
   },
   {
     path: "waiter",

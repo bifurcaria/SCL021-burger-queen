@@ -15,11 +15,12 @@ const Order = ({ command, erase, price, nameCallback, nameState }) => {
                     return (
                         <Item key={id}>
                             <Item.Content verticalAlign='middle'>
-                                <Item.Header>{name}</Item.Header>
-                                <Item.Description>${price}</Item.Description>
+                                <Item.Header style={{width:'auto'}}>{name}</Item.Header>
                                 <Button
                                 floated='right'
                                 onClick={() => erase(element)}>X</Button>
+                                <Item.Description>${price}</Item.Description>
+                                
                             </Item.Content>
                         </Item>
                     )
@@ -27,13 +28,13 @@ const Order = ({ command, erase, price, nameCallback, nameState }) => {
                 )}
             </Item.Group>
 
-            <h4> ${price} </h4>
+            <h4> Total: ${price} </h4>
 
 
             <Button
                 onClick={() => placeOrder(command, nameState )}
-            >enviar a cocina</Button>
-            <h4>al apretar este se debería subir a firebase y vaciar la comanda, quiza un popup que confirme</h4>
+            >Enviar a cocina</Button>
+           
         </div>
     )
 

@@ -14,7 +14,7 @@ function Waiter() {
 
   const names = data.map((element) => { return element.name })
 
-  const [activeCategory, setActiveCategory] = useState("Para beber");
+  const [activeCategory, setActiveCategory] = useState("Postres y dulces");
   const [currentOrder, setCurrentOrder] = useState([])
   const [customerName, setCustomerName] = useState("")
   const [visible, setVisible] = useState(false);
@@ -70,7 +70,7 @@ function Waiter() {
           <Grid.Column>
               <Sidebar.Pushable as={Segment}>
                   <Sidebar
-                      
+                      className='ui.basic.segment'
                       icon='labeled'
                       visible={visible}
                       width='wide'
@@ -87,7 +87,7 @@ function Waiter() {
 
                   <Sidebar.Pusher>
                       <Segment basic>
-                          <Header as='h3'>Application Content</Header>
+                          <Header as='h3'>Menú</Header>
 
                           <Categories
                               menu={names}

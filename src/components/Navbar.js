@@ -11,7 +11,7 @@ function Navbar() {
 
       >
         <Menu.Item
-          as='a' href='/'
+          as='a' href='/' style={{color:'white !important'}}
         >
           Inicio
         </Menu.Item>

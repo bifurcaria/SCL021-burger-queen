@@ -1,20 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@300&display=swap');
+
+*{
+  font-family: 'Archivo', sans-serif !important;
+}
+
 div#root {
-  text-align: -webkit-center
+  text-align: -webkit-center;
+  background: #e8e9ec;
 }
 
 .button{
-  background-color: #df5340 !important;
-  color:antiquewhite !important;
+  background-color: #3a51ba !important;
+  color:white !important;
+}
+
+.ui.menu>a{
+    color:white !important;
 }
 
 body{
-  background: #fcf8f4 !important;
   color:#3a2e39 !important;
+  background:  #e8e9ec !important;
 }
 
-a{
-  color:#3a2e39 !important;
-}
+
 
 header{
   color:#3a2e39 !important;
@@ -48,8 +57,8 @@ header{
   }
 }
 
-.ui.visible[class*="very wide"].left.sidebar~.pusher {
-  transform: translate3d(300px,0,0) !important;
+.ui.visible.left.sidebar~.pusher {
+   transform: translate3d(100px,0,0) !important;
 }
 
 .App-header {
@@ -64,7 +73,11 @@ header{
 }
 
 .App-link {
-  color: #61dafb;
+  color: #3a51ba;
+}
+
+.ui[class*="top fixed"].menu {
+  background: #3a51ba !important
 }
 
 @keyframes App-logo-spin {
@@ -87,6 +100,7 @@ header{
 
 .ui.card {
   margin: 1em 1em 1em 1em !important;
+  background: transparent !important;
 }
 
 .ui.card:first-child {
@@ -104,12 +118,33 @@ header{
   background:transparent !important;
 }
 
-.ui.basic.segment{
-  background: #f1c2ab !important;
-  border-radius:7px !important;
-  width:75%;
+.ui.left.visible.sidebar{
+  border: 1px solid rgba(34,36,38,.1) !important;
+  background: #e8e9ec;
+  box-shadow: none !important;
+  padding:30px;
 }
 
+.ui.basic.segment{
+  /* background: #f1c2ab !important; */
+  border-radius:7px !important;
+  width:75%;
+  border: 1px solid rgba(34,36,38,.1) !important;
+  background: rgba(0,0,0,.05) !important;
+}
+
+.ui.wide.left.sidebar, .ui.wide.right.sidebar {
+  width: 300px !important;
+}
 .ui.segment.pushable{
   border: none !important
+}
+
+.ui.card>.image{
+  padding:20px !important;
+}
+
+.ui.card>.image:not(.ui)>img, .ui.cards>.card>.image:not(.ui)>img {
+  border: none;
+  height: 50px;
 }

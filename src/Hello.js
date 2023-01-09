@@ -16,9 +16,9 @@ function Hello() {
        <Navbar/>
        <Container
        style={{marginTop: '100px'}}>
-        <Button as='a' href='/waiter' >
+        <Button as='a' href='/SCL021-burger-queen/waiter' >
         Garzones</Button>
-        <Button as='a' href='/cook'>Cocina</Button>
+        <Button as='a' href='/SCL021-burger-queen/cook'>Cocina</Button>
         </Container>
         </Container>
     )

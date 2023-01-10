@@ -1,6 +1,7 @@
 {
   "projects": {
-    "bq": "burg3rqu33n"
+    "bq": "burg3rqu33n",
+    "default": "burg3rqu33n"
   },
   "targets": {},
   "etags": {}

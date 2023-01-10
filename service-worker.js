@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/SCL021-burger-queen/precache-manifest.4814a7c15e20f5cce16f65e472c805d5.js"
+  "/SCL021-burger-queen/precache-manifest.275eaa235e8b933004429fdf30120c22.js"
 );
 
 workbox.clientsClaim();
